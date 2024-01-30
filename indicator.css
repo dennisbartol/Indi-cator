@@ -16,5 +16,29 @@ section h2 {
   text-transform: uppercase; 
 }
 
+.indicator { 
+  height: 6px; 
+  width: 100%; 
+  position: fixed; 
+  top: 0px; 
+}
 
+.indicator .progress { 
+  height: 100%; 
+  width: 0; 
+  border-radius: 3px; 
+  background: linear-gradient(to top, #008aff, #00ffe7); 
+  animation: animate 4s linear infinite; 
+}
+
+
+@keyframes animate {
+    0% {
+       filter: hue-rotate(0deg);
+    },
+    
+    50% {
+       filter: hue-rotate(360deg);
+    }
+}
 
