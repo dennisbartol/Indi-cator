@@ -1,44 +1,42 @@
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: system-ui;
+  background-color:  #010101; 
+  color: ghostwhite;
+}
 
 section {
-  height: 90vh; 
-  width: 90vh; 
-  display: grid; 
-  place-items: center; 
+  height: 80vh;
+  width: 80vw;
+  margin: 5rem auto;
+  border: 2px dotted white;
+  display: grid;
+  place-items: center;
+  background: #090909;
+  border-radius: 16px;
 }
 
-section h2 { 
-  text-transform: uppercase; 
+section h2 {
+  font-size: 3rem;
 }
 
-.indicator { 
-  height: 6px; 
-  width: 100%; 
-  position: fixed; 
-  top: 0px; 
+.scroll-indicator {
+  height: 6px;
+  width:  calc(100% - 8rem);
+  position: fixed;
+  top: 6px;
+  left: 4rem;
 }
 
-.indicator .progress { 
-  height: 100%; 
-  width: 0; 
-  border-radius: 3px; 
-  background: linear-gradient(to top, #008aff, #00ffe7); 
-  animation: animate 4s linear infinite; 
+.scroll-indicator .progress-bar {
+  height: 100%;
+  width: 5px;
+  border-radius: 6px;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  /* background: linear-gradient(to right, #8e2de2, #4a00e0); */
 }
-
-
-@keyframes animate {
-    0% {
-       filter: hue-rotate(0deg);
-    },
-    
-    50% {
-       filter: hue-rotate(360deg);
-    }
-}
-
